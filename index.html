@@ -1,1 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Equilíbrio Verde | Produção e Planeta</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- MENU -->
+
+  <header>
+
+    <nav>
+
+      <h1>🌱 Equilíbrio Verde</h1>
+
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#pilares">Pilares</a></li>
+        <li><a href="#frase">Mensagem</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section id="inicio" class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-conteudo">
+
+      <h2>Produção e Planeta</h2>
+
+      <p>
+        A força que alimenta o mundo é a mesma que precisa proteger a Terra.
+      </p>
+
+      <button onclick="mostrarMensagem()">
+        Conheça o Futuro Sustentável
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- SOBRE -->
+
+  <section class="sobre">
+
+    <h2>🌎 Equilíbrio Verde</h2>
+
+    <p>
+      Produzir em alta escala e preservar a natureza não são caminhos opostos.
+      São o único futuro possível.
+    </p>
+
+    <p>
+      O Equilíbrio Verde une a tecnologia do campo ao respeito pelo nosso solo,
+      provando que o verdadeiro progresso não deixa marcas,
+      mas sim um legado.
+    </p>
+
+    <h3>
+      Alimento para hoje. Vida para o amanhã.
+    </h3>
+
+  </section>
+
+  <!-- PILARES -->
+
+  <section id="pilares" class="pilares">
+
+    <h2>🌿 O Caminho para a Sustentabilidade no Campo</h2>
+
+    <div class="cards">
+
+      <!-- CARD 1 -->
+
+      <div class="card">
+
+        <h3>🚜 Tecnologia e Precisão</h3>
+
+        <p>
+          A inovação é a maior aliada da preservação.
+          Drones, sensores de solo e inteligência artificial ajudam
+          o produtor a usar água e recursos de forma inteligente.
+        </p>
+
+        <strong>Impacto:</strong>
+
+        <p>
+          Produzir mais sem aumentar o desmatamento.
+        </p>
+
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="card">
+
+        <h3>🌱 Manejo Regenerativo</h3>
+
+        <p>
+          Técnicas como rotação de culturas,
+          plantio direto e Integração
+          Lavoura-Pecuária-Floresta (ILPF)
+          recuperam naturalmente os nutrientes do solo.
+        </p>
+
+        <strong>Impacto:</strong>
+
+        <p>
+          Solos mais férteis, retenção de água
+          e redução das mudanças climáticas.
+        </p>
+
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="card">
+
+        <h3>💚 Consciência Compartilhada</h3>
+
+        <p>
+          O meio ambiente é o patrimônio mais valioso do agro.
+          Preservar nascentes e reservas legais garante
+          equilíbrio climático para a produção.
+        </p>
+
+        <strong>Impacto:</strong>
+
+        <p>
+          Sustentabilidade para as futuras gerações.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FRASE -->
+
+  <section id="frase" class="frase">
+
+    <div class="frase-box">
+
+      <h2>
+        “O verdadeiro progresso não é aquele que esgota a terra
+        para enriquecer o presente,
+        mas o que enriquece a terra para garantir o futuro.”
+      </h2>
+
+    </div>
+
+  </section>
+
+  <!-- GALERIA -->
+
+  <section class="galeria">
+
+    <h2>📸 Agro Sustentável</h2>
+
+    <div class="imagens">
+
+      <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+  </section>
+
+  <!-- PRÓXIMO PASSO -->
+
+  <section class="proximo-passo">
+
+    <h2>🚀 O Próximo Passo</h2>
+
+    <p>
+      A transformação do agronegócio depende
+      de informação, tecnologia e atitude.
+    </p>
+
+    <p>
+      Seja você produtor, estudante ou alguém
+      preocupado com o futuro do planeta,
+      este espaço foi criado para conectar pessoas
+      às melhores soluções do campo sustentável.
+    </p>
+
+    <button onclick="mostrarAlerta()">
+      Fazer Parte da Mudança
+    </button>
+
+  </section>
+
+  <!-- CONTATO -->
+
+  <section id="contato" class="contato">
+
+    <h2>📩 Entre em Contato</h2>
+
+    <form>
+
+      <input type="text" placeholder="Seu nome">
+
+      <input type="email" placeholder="Seu email">
+
+      <textarea placeholder="Digite sua mensagem"></textarea>
+
+      <button type="submit">
+        Enviar
+      </button>
+
+    </form>
+
+  </section>
+
+  <!-- RODAPÉ -->
+
+  <footer>
+
+    <p>
+      🌱 Equilíbrio Verde | Produção e Planeta
+    </p>
+
+    <p>
+      Concurso Agrinho 2026
+    </p>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

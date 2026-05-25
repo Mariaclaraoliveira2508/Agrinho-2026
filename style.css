@@ -1,1 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+
+  font-family: Arial, sans-serif;
+  background: #f4fff4;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* MENU */
+
+header {
+
+  background: #1b5e20;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+
+  color: white;
+}
+
+nav ul {
+
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+
+  color: #c8e6c9;
+}
+
+/* HERO */
+
+.hero {
+
+  height: 100vh;
+
+  background-image: url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1600&auto=format&fit=crop');
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  text-align: center;
+}
+
+.overlay {
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-conteudo {
+
+  position: relative;
+  color: white;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero h2 {
+
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.hero button {
+
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  background: #43a047;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+
+  background: #2e7d32;
+  transform: scale(1.05);
+}
+
+/* SOBRE */
+
+.sobre {
+
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.sobre h2 {
+
+  color: #2e7d32;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.sobre p {
+
+  max-width: 900px;
+  margin: 20px auto;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.sobre h3 {
+
+  margin-top: 30px;
+  color: #1b5e20;
+}
+
+/* PILARES */
+
+.pilares {
+
+  padding: 100px 20px;
+  background: #e8f5e9;
+  text-align: center;
+}
+
+.pilares h2 {
+
+  margin-bottom: 50px;
+  color: #1b5e20;
+  font-size: 40px;
+}
+
+.cards {
+
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+
+  background: white;
+  width: 320px;
+  padding: 30px;
+  border-radius: 20px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+  transition: 0.3s;
+}
+
+.card:hover {
+
+  transform: translateY(-10px);
+}
+
+.card h3 {
+
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.card p {
+
+  line-height: 1.7;
+}
+
+/* FRASE */
+
+.frase {
+
+  padding: 120px 20px;
+
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  text-align: center;
+}
+
+.frase-box {
+
+  background: rgba(0,0,0,0.6);
+  padding: 50px;
+  border-radius: 20px;
+  color: white;
+  max-width: 900px;
+  margin: auto;
+}
+
+.frase h2 {
+
+  font-size: 32px;
+  line-height: 1.6;
+}
+
+/* GALERIA */
+
+.galeria {
+
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.galeria h2 {
+
+  margin-bottom: 40px;
+  color: #2e7d32;
+}
+
+.imagens {
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.imagens img {
+
+  width: 320px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.imagens img:hover {
+
+  transform: scale(1.05);
+}
+
+/* PRÓXIMO PASSO */
+
+.proximo-passo {
+
+  padding: 100px 20px;
+  background: #e8f5e9;
+  text-align: center;
+}
+
+.proximo-passo h2 {
+
+  color: #1b5e20;
+  margin-bottom: 30px;
+}
+
+.proximo-passo p {
+
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.8;
+  font-size: 20px;
+}
+
+.proximo-passo button {
+
+  margin-top: 30px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  background: #2e7d32;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.proximo-passo button:hover {
+
+  background: #1b5e20;
+}
+
+/* CONTATO */
+
+.contato {
+
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.contato h2 {
+
+  margin-bottom: 40px;
+  color: #2e7d32;
+}
+
+form {
+
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 20px;
+}
+
+input,
+textarea {
+
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+
+  height: 150px;
+}
+
+form button {
+
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #1b511e;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+form button:hover {
+
+  background: #1b5e20;
+}
+
+/* RODAPÉ */
+
+footer {
+
+  background: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 768px) {
+
+  nav {
+
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h2 {
+
+    font-size: 40px;
+  }
+
+  .hero p {
+
+    font-size: 20px;
+  }
+
+  .frase h2 {
+
+    font-size: 24px;
+  }
+}
