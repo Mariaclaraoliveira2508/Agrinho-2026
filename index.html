@@ -1,150 +1,455 @@
+<!-- =====================================================
+SITE COMPLETO - AGRINHO 2026
+TEMA: Agro Forte, Futuro Sustentável
+ARQUIVO: index.html
+===================================================== -->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Equilíbrio Verde | Produção e Planeta</title>
+  <title>Equilíbrio Verde | Agro Forte</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#f4fff4;
+      color:#1d1d1d;
+      overflow-x:hidden;
+    }
+
+    /* MENU */
+
+    header{
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:999;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      padding:18px 8%;
+
+      background:rgba(0,0,0,0.55);
+      backdrop-filter:blur(10px);
+    }
+
+    .logo{
+      color:#fff;
+      font-size:1.6rem;
+      font-weight:800;
+    }
+
+    nav{
+      display:flex;
+      gap:30px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#7CFC00;
+    }
+
+    /* HERO */
+
+    .hero{
+      height:100vh;
+
+      background:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1800&auto=format&fit=crop') center/cover no-repeat;
+
+      position:relative;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      text-align:center;
+
+      padding:20px;
+    }
+
+    .overlay{
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.6);
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:900px;
+      color:white;
+    }
+
+    .hero h1{
+      font-size:4rem;
+      margin-bottom:15px;
+    }
+
+    .hero h2{
+      color:#7CFC00;
+      margin-bottom:20px;
+      font-size:2rem;
+    }
+
+    .hero p{
+      font-size:1.2rem;
+      line-height:1.9;
+    }
+
+    .hero button{
+      margin-top:35px;
+
+      padding:16px 35px;
+
+      border:none;
+      border-radius:50px;
+
+      background:#32cd32;
+      color:white;
+
+      font-size:1rem;
+      font-weight:600;
+
+      cursor:pointer;
+
+      transition:0.4s;
+    }
+
+    .hero button:hover{
+      transform:scale(1.05);
+      background:#228b22;
+    }
+
+    /* SEÇÕES */
+
+    section{
+      padding:100px 8%;
+    }
+
+    .titulo{
+      text-align:center;
+      font-size:2.8rem;
+      margin-bottom:60px;
+      color:#145214;
+    }
+
+    /* FRASE */
+
+    .frase{
+      background:#145214;
+      color:white;
+      text-align:center;
+    }
+
+    .frase h2{
+      line-height:1.8;
+      font-size:2rem;
+    }
+
+    /* CARDS */
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:20px;
+      overflow:hidden;
+
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:25px;
+    }
+
+    .card h3{
+      color:#228b22;
+      margin-bottom:15px;
+    }
+
+    .card p{
+      line-height:1.8;
+    }
+
+    /* CALCULADORA */
+
+    .calc{
+      background:linear-gradient(to right,#145214,#228b22);
+      color:white;
+      text-align:center;
+      border-radius:25px;
+    }
+
+    .calc p{
+      margin-top:10px;
+      margin-bottom:30px;
+    }
+
+    .calc-box{
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+
+      max-width:450px;
+      margin:auto;
+    }
+
+    .calc-box input{
+      padding:15px;
+      border:none;
+      border-radius:12px;
+
+      font-size:1rem;
+    }
+
+    .calc-box button{
+      padding:15px;
+
+      border:none;
+      border-radius:12px;
+
+      background:#7CFC00;
+      color:#145214;
+
+      font-weight:700;
+      cursor:pointer;
+
+      transition:0.3s;
+    }
+
+    .calc-box button:hover{
+      background:white;
+    }
+
+    #resultado{
+      margin-top:25px;
+      font-size:1.3rem;
+      font-weight:600;
+    }
+
+    /* IMPACTO */
+
+    .impacto{
+      background:#ecffec;
+    }
+
+    .contador-area{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:30px;
+    }
+
+    .contador{
+      background:white;
+      width:260px;
+
+      padding:40px 20px;
+      border-radius:20px;
+
+      text-align:center;
+
+      box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    .contador h3{
+      font-size:3rem;
+      color:#228b22;
+    }
+
+    /* QUIZ */
+
+    .quiz{
+      background:#145214;
+      color:white;
+      text-align:center;
+    }
+
+    .quiz-box{
+      max-width:700px;
+      margin:auto;
+    }
+
+    .quiz button{
+      display:block;
+      width:100%;
+
+      margin-top:15px;
+
+      padding:15px;
+
+      border:none;
+      border-radius:12px;
+
+      background:#32cd32;
+      color:white;
+
+      cursor:pointer;
+
+      transition:0.3s;
+    }
+
+    .quiz button:hover{
+      background:#7CFC00;
+      color:#145214;
+    }
+
+    #quizResultado{
+      margin-top:25px;
+      font-size:1.2rem;
+      font-weight:700;
+    }
+
+    /* GALERIA */
+
+    .galeria-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .galeria-grid img{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+
+      border-radius:20px;
+
+      transition:0.4s;
+    }
+
+    .galeria-grid img:hover{
+      transform:scale(1.04);
+    }
+
+    /* RODAPÉ */
+
+    footer{
+      background:#0b250b;
+      color:white;
+      text-align:center;
+      padding:50px 20px;
+    }
+
+    footer h2{
+      margin-bottom:20px;
+    }
+
+    #dataAtual{
+      display:block;
+      margin-top:20px;
+      color:#7CFC00;
+      font-weight:600;
+    }
+
+    /* RESPONSIVO */
+
+    @media(max-width:768px){
+
+      nav{
+        display:none;
+      }
+
+      .hero h1{
+        font-size:2.5rem;
+      }
+
+      .hero h2{
+        font-size:1.4rem;
+      }
+
+      .titulo{
+        font-size:2rem;
+      }
+
+    }
+
+  </style>
 </head>
-
 <body>
 
   <!-- MENU -->
 
   <header>
 
+    <div class="logo">🌱 Equilíbrio Verde</div>
+
     <nav>
-
-      <h1>🌱 Equilíbrio Verde</h1>
-
-      <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#pilares">Pilares</a></li>
-        <li><a href="#frase">Mensagem</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-
+      <a href="#inicio">Início</a>
+      <a href="#pilares">Pilares</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#impacto">Impacto</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#galeria">Galeria</a>
     </nav>
 
   </header>
 
   <!-- HERO -->
 
-  <section id="inicio" class="hero">
+  <section class="hero" id="inicio">
 
     <div class="overlay"></div>
 
-    <div class="hero-conteudo">
+    <div class="hero-content">
 
-      <h2>Produção e Planeta</h2>
+      <h1>Agro Forte, Futuro Sustentável</h1>
+
+      <h2>Equilíbrio Verde: Produção e Planeta</h2>
 
       <p>
-        A força que alimenta o mundo é a mesma que precisa proteger a Terra.
+        Produzir em alta escala e preservar a natureza não são caminhos opostos.
+        O verdadeiro progresso é aquele que alimenta o presente sem destruir o futuro.
       </p>
 
-      <button onclick="mostrarMensagem()">
-        Conheça o Futuro Sustentável
+      <button onclick="irParaCalculadora()">
+        🌱 Abrir Calculadora de Sementes
       </button>
-
-    </div>
-
-  </section>
-
-  <!-- SOBRE -->
-
-  <section class="sobre">
-
-    <h2>🌎 Equilíbrio Verde</h2>
-
-    <p>
-      Produzir em alta escala e preservar a natureza não são caminhos opostos.
-      São o único futuro possível.
-    </p>
-
-    <p>
-      O Equilíbrio Verde une a tecnologia do campo ao respeito pelo nosso solo,
-      provando que o verdadeiro progresso não deixa marcas,
-      mas sim um legado.
-    </p>
-
-    <h3>
-      Alimento para hoje. Vida para o amanhã.
-    </h3>
-
-  </section>
-
-  <!-- PILARES -->
-
-  <section id="pilares" class="pilares">
-
-    <h2>🌿 O Caminho para a Sustentabilidade no Campo</h2>
-
-    <div class="cards">
-
-      <!-- CARD 1 -->
-
-      <div class="card">
-
-        <h3>🚜 Tecnologia e Precisão</h3>
-
-        <p>
-          A inovação é a maior aliada da preservação.
-          Drones, sensores de solo e inteligência artificial ajudam
-          o produtor a usar água e recursos de forma inteligente.
-        </p>
-
-        <strong>Impacto:</strong>
-
-        <p>
-          Produzir mais sem aumentar o desmatamento.
-        </p>
-
-      </div>
-
-      <!-- CARD 2 -->
-
-      <div class="card">
-
-        <h3>🌱 Manejo Regenerativo</h3>
-
-        <p>
-          Técnicas como rotação de culturas,
-          plantio direto e Integração
-          Lavoura-Pecuária-Floresta (ILPF)
-          recuperam naturalmente os nutrientes do solo.
-        </p>
-
-        <strong>Impacto:</strong>
-
-        <p>
-          Solos mais férteis, retenção de água
-          e redução das mudanças climáticas.
-        </p>
-
-      </div>
-
-      <!-- CARD 3 -->
-
-      <div class="card">
-
-        <h3>💚 Consciência Compartilhada</h3>
-
-        <p>
-          O meio ambiente é o patrimônio mais valioso do agro.
-          Preservar nascentes e reservas legais garante
-          equilíbrio climático para a produção.
-        </p>
-
-        <strong>Impacto:</strong>
-
-        <p>
-          Sustentabilidade para as futuras gerações.
-        </p>
-
-      </div>
 
     </div>
 
@@ -152,15 +457,165 @@
 
   <!-- FRASE -->
 
-  <section id="frase" class="frase">
+  <section class="frase">
 
-    <div class="frase-box">
+    <h2>
+      “A força que alimenta o mundo é a mesma que precisa proteger a Terra.”
+    </h2>
 
-      <h2>
-        “O verdadeiro progresso não é aquele que esgota a terra
-        para enriquecer o presente,
-        mas o que enriquece a terra para garantir o futuro.”
+  </section>
+
+  <!-- PILARES -->
+
+  <section id="pilares">
+
+    <h2 class="titulo">
+      O Caminho para a Sustentabilidade no Campo
+    </h2>
+
+    <div class="cards">
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+
+          <h3>🚜 Tecnologia e Precisão</h3>
+
+          <p>
+            Drones, sensores e inteligência artificial ajudam o produtor
+            a utilizar apenas o necessário de água e insumos.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+
+          <h3>🌾 Manejo Regenerativo</h3>
+
+          <p>
+            Técnicas como rotação de culturas e plantio direto
+            recuperam a fertilidade do solo e preservam a natureza.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+
+          <h3>🌍 Consciência Compartilhada</h3>
+
+          <p>
+            O agro sustentável entende que preservar nascentes e florestas
+            é proteger o futuro da produção agrícola.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CALCULADORA -->
+
+  <section id="calculadora">
+
+    <div class="calc">
+
+      <h2 class="titulo" style="color:white;">
+        🌱 Calculadora de Sementes
       </h2>
+
+      <p>
+        Descubra rapidamente quantas sementes serão necessárias para seu plantio.
+      </p>
+
+      <div class="calc-box">
+
+        <input type="number" id="area" placeholder="Digite a área em hectares">
+
+        <input type="number" id="sementes" placeholder="Sementes por hectare">
+
+        <button onclick="calcular()">
+          CALCULAR 🌿
+        </button>
+
+        <div id="resultado"></div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- IMPACTO -->
+
+  <section class="impacto" id="impacto">
+
+    <h2 class="titulo">🌎 Impacto Sustentável</h2>
+
+    <div class="contador-area">
+
+      <div class="contador">
+        <h3 id="arvores">0</h3>
+        <p>Árvores Preservadas</p>
+      </div>
+
+      <div class="contador">
+        <h3 id="agua">0</h3>
+        <p>Litros de Água Economizados</p>
+      </div>
+
+      <div class="contador">
+        <h3 id="carbono">0</h3>
+        <p>Kg de CO₂ Reduzidos</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- QUIZ -->
+
+  <section class="quiz" id="quiz">
+
+    <h2 class="titulo" style="color:white;">
+      🧠 Quiz Sustentável
+    </h2>
+
+    <div class="quiz-box">
+
+      <h3>
+        Qual prática ajuda na recuperação natural do solo?
+      </h3>
+
+      <button onclick="quiz(true)">
+        Rotação de Culturas
+      </button>
+
+      <button onclick="quiz(false)">
+        Queimadas Ilegais
+      </button>
+
+      <button onclick="quiz(false)">
+        Desmatamento
+      </button>
+
+      <div id="quizResultado"></div>
 
     </div>
 
@@ -168,65 +623,23 @@
 
   <!-- GALERIA -->
 
-  <section class="galeria">
+  <section id="galeria">
 
-    <h2>📸 Agro Sustentável</h2>
+    <h2 class="titulo">
+      🌿 Agro e Natureza em Harmonia
+    </h2>
 
-    <div class="imagens">
+    <div class="galeria-grid">
 
-      <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
 
-      <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop">
 
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?q=80&w=1200&auto=format&fit=crop">
 
     </div>
-
-  </section>
-
-  <!-- PRÓXIMO PASSO -->
-
-  <section class="proximo-passo">
-
-    <h2>🚀 O Próximo Passo</h2>
-
-    <p>
-      A transformação do agronegócio depende
-      de informação, tecnologia e atitude.
-    </p>
-
-    <p>
-      Seja você produtor, estudante ou alguém
-      preocupado com o futuro do planeta,
-      este espaço foi criado para conectar pessoas
-      às melhores soluções do campo sustentável.
-    </p>
-
-    <button onclick="mostrarAlerta()">
-      Fazer Parte da Mudança
-    </button>
-
-  </section>
-
-  <!-- CONTATO -->
-
-  <section id="contato" class="contato">
-
-    <h2>📩 Entre em Contato</h2>
-
-    <form>
-
-      <input type="text" placeholder="Seu nome">
-
-      <input type="email" placeholder="Seu email">
-
-      <textarea placeholder="Digite sua mensagem"></textarea>
-
-      <button type="submit">
-        Enviar
-      </button>
-
-    </form>
 
   </section>
 
@@ -234,18 +647,115 @@
 
   <footer>
 
-    <p>
-      🌱 Equilíbrio Verde | Produção e Planeta
-    </p>
+    <h2>
+      🌱 Alimento para hoje. Vida para o amanhã.
+    </h2>
 
     <p>
-      Concurso Agrinho 2026
+      A transformação do agronegócio depende de informação,
+      tecnologia e atitude.
     </p>
+
+    <span id="dataAtual"></span>
 
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+
+    // IR PARA CALCULADORA
+
+    function irParaCalculadora(){
+
+      document.getElementById("calculadora").scrollIntoView({
+        behavior:"smooth"
+      });
+
+    }
+
+    // CALCULADORA DE SEMENTES
+
+    function calcular(){
+
+      let area = document.getElementById("area").value;
+
+      let sementes = document.getElementById("sementes").value;
+
+      let total = area * sementes;
+
+      if(area == "" || sementes == ""){
+
+        document.getElementById("resultado").innerHTML =
+        "⚠️ Preencha todos os campos.";
+
+      }else{
+
+        document.getElementById("resultado").innerHTML =
+        `🌾 Você precisará de aproximadamente <strong>${total.toLocaleString()}</strong> sementes para o plantio.`;
+
+      }
+
+    }
+
+    // QUIZ
+
+    function quiz(correta){
+
+      let resultado = document.getElementById("quizResultado");
+
+      if(correta){
+
+        resultado.innerHTML =
+        "✅ Correto! Essa técnica ajuda a recuperar nutrientes do solo.";
+
+        resultado.style.color = "#7CFC00";
+
+      }else{
+
+        resultado.innerHTML =
+        "❌ Resposta incorreta. Tente novamente!";
+
+        resultado.style.color = "#ff8080";
+
+      }
+
+    }
+
+    // DATA AUTOMÁTICA
+
+    let data = new Date();
+
+    document.getElementById("dataAtual").innerHTML =
+    "📅 Hoje é: " + data.toLocaleDateString('pt-BR');
+
+    // CONTADORES ANIMADOS
+
+    function animar(id, limite){
+
+      let numero = 0;
+
+      let tempo = setInterval(() => {
+
+        numero += Math.ceil(limite / 100);
+
+        if(numero >= limite){
+
+          numero = limite;
+          clearInterval(tempo);
+
+        }
+
+        document.getElementById(id).innerHTML =
+        numero.toLocaleString();
+
+      }, 30);
+
+    }
+
+    animar("arvores", 50000);
+    animar("agua", 120000);
+    animar("carbono", 35000);
+
+  </script>
 
 </body>
-
 </html>
